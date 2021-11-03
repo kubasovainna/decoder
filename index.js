@@ -13,7 +13,7 @@ const app = express();
         'Access-Control-Allow-Methods': 'GET,POST,PUT,PATCH,OPTIONS,DELETE',
         'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Accept'
       };
-      const login = 'itmo224658';
+      const login = 'Кубасова';
       app.all('/login/', (req, res) => {
           res.set(CORS);
           res.send(login);
