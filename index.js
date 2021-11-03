@@ -6,7 +6,7 @@ const serveStatic = require("serve-static");
 const path = require("path");
 const PORT = process.env.PORT || 5000;
 const app = express();
-// const __dirname = path.resolve();
+const __dirname = path.resolve();
 
 app.use(express.json());
 
