@@ -6,7 +6,18 @@ const serveStatic = require("serve-static");
 const path = require("path");
 const PORT = process.env.PORT || 5000;
 const app = express();
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
+
+    const CORS = {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET,POST,PUT,PATCH,OPTIONS,DELETE',
+        'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Accept'
+      };
+      const login = 'itmo224658';
+      app.all('/login/', (req, res) => {
+          res.set(CORS);
+          res.send(login);
+          })
 
 app.use(express.json());
 
